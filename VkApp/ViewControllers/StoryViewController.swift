@@ -2,44 +2,102 @@
 //  StoryViewController.swift
 //  VkApp
 //
-//  Created by Александр on 04.06.2022.
+//  Created by Александр on 05.06.2022.
 //
 
 import UIKit
-import AVKit
-import AVFoundation
 
 class StoryViewController: UIViewController {
 
-    private let queuePlayer = AVQueuePlayer()
-    let videos = Story.getVideos()
-    var videoIndex = 0
+    @IBOutlet weak var imageView: UIImageView!
     
-    private func addAllVideosToPlayer() {
-        for video in videos {
-            let asset = AVURLAsset(url: video.url)
-            let item = AVPlayerItem(asset: asset)
-            
-            queuePlayer.insert(item, after: queuePlayer.items().last)
+    var numberOfPic = 1
+    var timer = Timer()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        switchPictire()
+        createTimer()
+    }
+    
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        let touch = touches.first
+        if let location = touch?.location(in: UIScreen.main.focusedView) {
+            let halfScreenWidth = UIScreen.main.bounds.width / 2
+            if location.x < halfScreenWidth {
+                print("Left touch")
+                if numberOfPic <= 5 && numberOfPic != 1 {
+                    numberOfPic -= 1
+                }
+                switchPictire()
+            } else {
+                print("Right touch")
+                if numberOfPic >= 1 && numberOfPic != 5 {
+                    numberOfPic += 1
+                }
+                switchPictire()
+            }
         }
     }
     
-    func playVideo() {
-        addAllVideosToPlayer()
-        let player = queuePlayer
-        let layer = AVPlayerLayer(player: player)
-        layer.frame = view.bounds
-        
-        view.layer.addSublayer(layer)
-        
-        player.play()
+    @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .left:
+            print("right \(numberOfPic)")
+            if numberOfPic >= 1 && numberOfPic != 5 {
+                numberOfPic += 1
+            }
+            switchPictire()
+        default:
+            print("left \(numberOfPic)")
+            if numberOfPic <= 5 && numberOfPic != 1 {
+                numberOfPic -= 1
+            }
+            switchPictire()
+        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        playVideo()
+    func switchPictire() {
+        switch numberOfPic {
+        case 1:
+            imageView.image = #imageLiteral(resourceName: "1.jpeg")
+            timer.invalidate()
+            createTimer()
+        case 2:
+            imageView.image = #imageLiteral(resourceName: "2.jpeg")
+            timer.invalidate()
+            createTimer()
+        case 3:
+            imageView.image = #imageLiteral(resourceName: "3.jpeg")
+            timer.invalidate()
+            createTimer()
+        case 4:
+            imageView.image = #imageLiteral(resourceName: "4.jpeg")
+            timer.invalidate()
+            createTimer()
+        default:
+            imageView.image = #imageLiteral(resourceName: "5.jpeg")
+            timer.invalidate()
+            createTimer()
+        }
     }
     
+    func createTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3,
+                                 target: self,
+                                 selector: #selector(nextPic),
+                                 userInfo: nil,
+                                 repeats: false
+        )
+    }
     
+    @objc func nextPic() {
+        if numberOfPic >= 1 && numberOfPic != 5 {
+            numberOfPic += 1
+        }
+        switchPictire()
+    }
+
 }
