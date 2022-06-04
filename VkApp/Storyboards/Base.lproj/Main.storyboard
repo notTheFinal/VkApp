@@ -265,6 +265,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonsStack" destination="AFZ-Kv-ov9" id="s4X-vt-YJz"/>
                         <outlet property="delButton" destination="gZZ-pW-n57" id="GTQ-Ro-8N4"/>
                         <outlet property="eightButton" destination="Glt-Ab-xzy" id="S0S-Lg-bWK"/>
                         <outlet property="firstEnterView" destination="YOg-tI-fx7" id="zIT-Mj-tPf"/>

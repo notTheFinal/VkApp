@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var delButton: UIButton!
     
     @IBOutlet weak var stackEnterPINViews: UIStackView!
+    @IBOutlet weak var buttonsStack: UIStackView!
+    
     @IBOutlet weak var firstEnterView: UIView!
     @IBOutlet weak var secondEnterView: UIView!
     @IBOutlet weak var thirdEnterView: UIView!
@@ -73,11 +75,26 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func startLogin () {
+    private func startLogin() {
         isPINSet = true
         pinLabel.text = "Введите пин-код"
         for view in stackEnterPINViews.arrangedSubviews {
             view.backgroundColor = .systemBlue
+        }
+        indexPIN = 0
+        insertPIN = ""
+    }
+    
+    private func checkPIN() {
+        if setPIN == insertPIN {
+            pinLabel.text = "Верный PIN"
+            buttonsStack.isHidden = true
+        } else {
+            startLogin()
+            let alert = UIAlertController(title: "Ошибка!", message: "Неверный пароль!", preferredStyle: .alert)
+            let okBtn = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okBtn)
+            present(alert, animated: true)
         }
     }
     
@@ -89,14 +106,26 @@ class LoginViewController: UIViewController {
             if setPIN.count == 4 {
                 startLogin()
             }
+        } else {
+            insertPIN += sender.titleLabel!.text ?? "0"
+            updatePINViews(true)
+            indexPIN += 1
+            if insertPIN.count == 4 {
+                checkPIN()
+            }
         }
 
         print(setPIN)
         }
     
     @IBAction func delButtonPressed() {
+        guard indexPIN != 0 else {return}
         updatePINViews(false)
-        setPIN.removeLast()
+        if !isPINSet {
+            setPIN.removeLast()
+        } else {
+            insertPIN.removeLast()
+        }
         indexPIN -= 1
     }
     
