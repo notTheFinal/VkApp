@@ -27,13 +27,11 @@ class StoryViewController: UIViewController {
         if let location = touch?.location(in: UIScreen.main.focusedView) {
             let halfScreenWidth = UIScreen.main.bounds.width / 2
             if location.x < halfScreenWidth {
-                print("Left touch")
                 if numberOfPic <= 5 && numberOfPic != 1 {
                     numberOfPic -= 1
                 }
                 switchPictire()
             } else {
-                print("Right touch")
                 if numberOfPic >= 1 && numberOfPic != 5 {
                     numberOfPic += 1
                 }
@@ -45,13 +43,11 @@ class StoryViewController: UIViewController {
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .left:
-            print("right \(numberOfPic)")
             if numberOfPic >= 1 && numberOfPic != 5 {
                 numberOfPic += 1
             }
             switchPictire()
         default:
-            print("left \(numberOfPic)")
             if numberOfPic <= 5 && numberOfPic != 1 {
                 numberOfPic -= 1
             }

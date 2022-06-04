@@ -121,8 +121,6 @@ class LoginViewController: UIViewController {
                 checkPIN()
             }
         }
-
-        print(setPIN)
         }
     
     @IBAction func delButtonPressed() {
