@@ -130,7 +130,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func questionButtonPressed() {
+        let alert = UIAlertController(title: "Привет!", message: "Имеются вопросики?", preferredStyle: .alert)
+        let okBtn = UIAlertAction(title: "Вопросов нет", style: .default, handler: nil)
+        alert.addAction(okBtn)
         
+        present(alert, animated: true)
     }
     
 
