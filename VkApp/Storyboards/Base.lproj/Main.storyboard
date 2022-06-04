@@ -246,8 +246,8 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите пин-код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqH-Zz-EWg">
-                                <rect key="frame" x="128.66666666666669" y="167.66666666666666" width="156.66666666666669" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Установите пин-код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqH-Zz-EWg">
+                                <rect key="frame" x="114.33333333333333" y="167.66666666666666" width="185.33333333333337" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -273,6 +273,7 @@
                         <outlet property="fourthEnterView" destination="sgL-Rw-dbZ" id="eRV-FT-Z2K"/>
                         <outlet property="nineButton" destination="uWz-Ow-Hqm" id="Oft-7r-TLb"/>
                         <outlet property="oneButton" destination="2aS-Ut-RH9" id="082-i6-ELj"/>
+                        <outlet property="pinLabel" destination="HqH-Zz-EWg" id="n7k-h3-2b6"/>
                         <outlet property="questionButton" destination="wpb-eu-VrJ" id="Gjt-p8-3AB"/>
                         <outlet property="secondEnterView" destination="cMV-7Y-yTh" id="T14-cc-nM4"/>
                         <outlet property="sevenButton" destination="bDT-bp-AMB" id="1C0-rf-hhf"/>

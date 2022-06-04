@@ -7,11 +7,15 @@
 
 import UIKit
 
+private var setPIN = ""
 private var insertPIN = ""
 private var indexPIN = 0
+private var isPINSet = false
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var pinLabel: UILabel!
+    
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var twoButton: UIButton!
     @IBOutlet weak var threeButton: UIButton!
@@ -57,18 +61,43 @@ class LoginViewController: UIViewController {
         secondEnterView.layer.borderWidth = 2
         thirdEnterView.layer.borderWidth = 2
         fourthEnterView.layer.borderWidth = 2
+        
+    }
+    
+    private func updatePINViews(_ enter: Bool) {
+        if enter == true {
+            stackEnterPINViews.arrangedSubviews[indexPIN].backgroundColor = .white
+        } else {
+            stackEnterPINViews.arrangedSubviews[indexPIN-1].backgroundColor = .systemBlue
+            
+        }
+    }
+    
+    private func startLogin () {
+        isPINSet = true
+        pinLabel.text = "Введите пин-код"
+        for view in stackEnterPINViews.arrangedSubviews {
+            view.backgroundColor = .systemBlue
+        }
     }
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
-        guard indexPIN <= 3 else {return}
-        insertPIN += sender.titleLabel!.text ?? "0"
-        stackEnterPINViews.arrangedSubviews[indexPIN].backgroundColor = .white
-        indexPIN += 1
-        
-    }
+        if !isPINSet {
+            setPIN += sender.titleLabel!.text ?? "0"
+            updatePINViews(true)
+            indexPIN += 1
+            if setPIN.count == 4 {
+                startLogin()
+            }
+        }
+
+        print(setPIN)
+        }
     
     @IBAction func delButtonPressed() {
-        
+        updatePINViews(false)
+        setPIN.removeLast()
+        indexPIN -= 1
     }
     
     @IBAction func questionButtonPressed() {
