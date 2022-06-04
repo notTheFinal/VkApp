@@ -37,6 +37,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var thirdEnterView: UIView!
     @IBOutlet weak var fourthEnterView: UIView!
     
+    override func viewDidLoad() {
+        view.isUserInteractionEnabled = true
+        view.isMultipleTouchEnabled = true
+        oneButton.isPointerInteractionEnabled = true
+    }
+    
     override func viewWillLayoutSubviews() {
         oneButton.layer.cornerRadius = oneButton.frame.width / 2
         twoButton.layer.cornerRadius = twoButton.frame.width / 2
@@ -89,6 +95,7 @@ class LoginViewController: UIViewController {
         if setPIN == insertPIN {
             pinLabel.text = "Верный PIN"
             buttonsStack.isHidden = true
+            performSegue(withIdentifier: "showStories", sender: nil)
         } else {
             startLogin()
             let alert = UIAlertController(title: "Ошибка!", message: "Неверный пароль!", preferredStyle: .alert)
@@ -138,4 +145,18 @@ class LoginViewController: UIViewController {
     }
     
 
+    
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        if let touch = touches.first {
+//
+//            if touch.view == oneButton
+//            {
+//                print("s")
+//            } else {
+//                print("f")
+//            }
+//        }
+//    }
+//
+    
 }
