@@ -300,28 +300,9 @@
                     <view key="view" contentMode="scaleToFill" id="hiW-gz-CyQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aht-kD-h9J">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0aB-Xc-clp" appends="YES" id="zJX-Ih-zwC"/>
-                                    <outletCollection property="gestureRecognizers" destination="Xc0-D8-dkI" appends="YES" id="n70-Be-6nb"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="17f-JJ-Nf9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aht-kD-h9J" firstAttribute="trailing" secondItem="17f-JJ-Nf9" secondAttribute="trailing" id="IMV-sq-pUg"/>
-                            <constraint firstItem="aht-kD-h9J" firstAttribute="top" secondItem="hiW-gz-CyQ" secondAttribute="top" id="jd1-RN-HaP"/>
-                            <constraint firstAttribute="bottom" secondItem="aht-kD-h9J" secondAttribute="bottom" id="wIz-zX-2JX"/>
-                            <constraint firstItem="aht-kD-h9J" firstAttribute="leading" secondItem="17f-JJ-Nf9" secondAttribute="leading" id="zSm-KM-aWY"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="aht-kD-h9J" id="tYY-UW-V9l"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXH-dm-Sxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="0aB-Xc-clp">
