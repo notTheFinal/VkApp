@@ -13,6 +13,7 @@
 		A9138B8C284BEB2A00BE9DA5 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A9138B87284BEB2900BE9DA5 /* 2.jpeg */; };
 		A9138B8D284BEB2A00BE9DA5 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A9138B88284BEB2A00BE9DA5 /* 4.jpeg */; };
 		A9138B8E284BEB2A00BE9DA5 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A9138B89284BEB2A00BE9DA5 /* 3.jpeg */; };
+		A9138B90284C407200BE9DA5 /* mail.ru.svg in Resources */ = {isa = PBXBuildFile; fileRef = A9138B8F284C407100BE9DA5 /* mail.ru.svg */; };
 		A989F2FA284B18ED00ABCBCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989F2F9284B18ED00ABCBCE /* AppDelegate.swift */; };
 		A989F2FC284B18ED00ABCBCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989F2FB284B18ED00ABCBCE /* SceneDelegate.swift */; };
 		A989F301284B18ED00ABCBCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A989F2FF284B18ED00ABCBCE /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		A9138B87284BEB2900BE9DA5 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		A9138B88284BEB2A00BE9DA5 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
 		A9138B89284BEB2A00BE9DA5 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		A9138B8F284C407100BE9DA5 /* mail.ru.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mail.ru.svg; sourceTree = "<group>"; };
 		A989F2F6284B18ED00ABCBCE /* VkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A989F2F9284B18ED00ABCBCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A989F2FB284B18ED00ABCBCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				A9138B89284BEB2A00BE9DA5 /* 3.jpeg */,
 				A9138B88284BEB2A00BE9DA5 /* 4.jpeg */,
 				A9138B85284BEB2900BE9DA5 /* 5.jpeg */,
+				A9138B8F284C407100BE9DA5 /* mail.ru.svg */,
 			);
 			path = Resouces;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				A9138B8B284BEB2A00BE9DA5 /* 1.jpeg in Resources */,
 				A989F306284B18EF00ABCBCE /* LaunchScreen.storyboard in Resources */,
 				A9138B8C284BEB2A00BE9DA5 /* 2.jpeg in Resources */,
+				A9138B90284C407200BE9DA5 /* mail.ru.svg in Resources */,
 				A989F303284B18EF00ABCBCE /* Assets.xcassets in Resources */,
 				A9138B8D284BEB2A00BE9DA5 /* 4.jpeg in Resources */,
 				A9138B8E284BEB2A00BE9DA5 /* 3.jpeg in Resources */,

@@ -38,6 +38,13 @@ class StoryViewController: UIViewController {
         view.addSubview(backgroungView)
         view.sendSubviewToBack(backgroungView)
         
+        let blur = UIBlurEffect(style: .regular)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = view.bounds
+        view.addSubview(blurView)
+        view.sendSubviewToBack(blurView)
+        view.sendSubviewToBack(backgroungView)
+        
     }
     
     

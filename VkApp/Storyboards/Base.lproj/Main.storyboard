@@ -300,8 +300,22 @@
                     <view key="view" contentMode="scaleToFill" id="hiW-gz-CyQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hvjhkjhflhfluf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-s3-LWE">
+                                <rect key="frame" x="179" y="136" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="17f-JJ-Nf9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="17f-JJ-Nf9" firstAttribute="bottom" secondItem="Xtp-s3-LWE" secondAttribute="bottom" constant="705" id="0EE-gR-awu"/>
+                            <constraint firstItem="Xtp-s3-LWE" firstAttribute="leading" secondItem="17f-JJ-Nf9" secondAttribute="leading" constant="179" id="YLX-yP-Q6p"/>
+                            <constraint firstItem="17f-JJ-Nf9" firstAttribute="trailing" secondItem="Xtp-s3-LWE" secondAttribute="trailing" constant="137" id="hwr-Sl-xYF"/>
+                            <constraint firstItem="Xtp-s3-LWE" firstAttribute="top" secondItem="17f-JJ-Nf9" secondAttribute="top" constant="92" id="wrM-Ku-kmH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXH-dm-Sxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
